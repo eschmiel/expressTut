@@ -1,5 +1,5 @@
 var Author = require('../models/author');
-var async = requir('async');
+var async = require('async');
 var Book = require('../models/book');
 
 // Display list of all Authors.

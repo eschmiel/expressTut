@@ -14,9 +14,9 @@ block content
 				|,
 	
 	div(style='margin-left:20px;margin-top:20px')
-	 h4 Copies
+		h4 Copies
 	 
-	 each val in book_instances
+	each val in book_instances
 		hr 
 		if val.status=='Available'
 			p.text-success #{val.status}
@@ -26,7 +26,7 @@ block content
 			p.text-warning #{val.status}
 		p #[strong Imprint:] #{val.imprint}
 		if val.status!='Available'
-			p#[strong Due back:] #{val.due_back}
+			p #[strong Due back:] #{val.due_back_formatted}
 		p #[strong Id:]&nbsp;
 			a(href=val.url) #{val.id}
 	
